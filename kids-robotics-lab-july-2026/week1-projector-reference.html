@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 1 — Robot Memory · Projector Reference</title>
+<style>
+  :root {
+    --ink: #14213d;
+    --muted: #4a5568;
+    --line: #d7dce4;
+    --bg: #ffffff;
+    --panel: #f5f7fb;
+    --code-bg: #0f1729;
+    --code-ink: #e7ecf5;
+    --accent: #1f6feb;
+    --green: #1a7f43;
+    --gold: #b7791f;
+    --red: #c0392b;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 28px 32px 48px; }
+  header { border-bottom: 4px solid var(--ink); padding-bottom: 12px; margin-bottom: 20px; }
+  .kicker { font-size: 15px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+  h1 { font-size: 34px; margin: 4px 0 0; line-height: 1.1; }
+  h1 .em { color: var(--accent); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  section { break-inside: avoid; }
+  h2 { font-size: 20px; margin: 0 0 10px; padding: 6px 12px; border-radius: 8px;
+    background: var(--panel); border-left: 6px solid var(--accent); }
+  pre { background: var(--code-bg); color: var(--code-ink); border-radius: 10px;
+    padding: 14px 16px; font-family: "SF Mono", "Cascadia Code", Consolas, monospace;
+    font-size: 17px; line-height: 1.5; overflow-x: auto; margin: 0 0 12px; }
+  pre .c { color: #7f93b5; }
+  pre .s { color: #9ae6b4; }
+  pre .k { color: #f6ad55; }
+  .beat { font-size: 14px; color: var(--muted); font-weight: 700; margin: 0 0 4px; text-transform: uppercase; letter-spacing: .06em; }
+  .levels { list-style: none; padding: 0; margin: 0; }
+  .levels li { padding: 10px 14px; border: 1px solid var(--line); border-radius: 10px; margin-bottom: 10px; font-size: 17px; }
+  .levels .tag { display: inline-block; font-weight: 800; font-size: 13px; letter-spacing: .04em;
+    padding: 2px 9px; border-radius: 999px; margin-right: 8px; color: #fff; text-transform: uppercase; }
+  .t-min { background: var(--green); }
+  .t-std { background: var(--accent); }
+  .t-boss { background: var(--gold); }
+  .bugs li { font-size: 16px; margin-bottom: 8px; }
+  .bugs code { background: #fff2f0; color: var(--red); padding: 1px 6px; border-radius: 5px; font-weight: 700; }
+  .full { grid-column: 1 / -1; }
+  .mantra { text-align: center; font-size: 19px; font-weight: 700; color: var(--ink);
+    background: var(--panel); border-radius: 12px; padding: 14px; margin-top: 6px; }
+  .mantra span { color: var(--accent); }
+  @media print {
+    .wrap { max-width: none; padding: 0; }
+    pre { font-size: 13px; }
+    h1 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Kids Robotics Lab · July 2026 · Session 1 of 3</div>
+    <h1>Week 1 — Robot <span class="em">Memory</span>: Variables &amp; Talking to Your Program</h1>
+  </header>
+
+  <div class="grid">
+    <section>
+      <h2>Mini-lesson snippets (predict &rarr; run)</h2>
+      <p class="beat">1 · The box</p>
+      <pre><span class="k">robot_name</span> = <span class="s">"Rusty"</span>
+<span class="k">battery</span> = 100</pre>
+      <p class="beat">2 · Reading the box (f-string)</p>
+      <pre>print(f<span class="s">"My robot is {robot_name}, battery {battery}%"</span>)</pre>
+      <p class="beat">3 · Changing the box</p>
+      <pre><span class="k">battery</span> = battery - 10
+print(f<span class="s">"After driving: {battery}%"</span>)</pre>
+      <p class="beat">4 · input() = the program's ears</p>
+      <pre><span class="k">pilot</span> = input(<span class="s">"Who is driving? "</span>)
+print(f<span class="s">"Welcome aboard, {pilot}!"</span>)</pre>
+    </section>
+
+    <section>
+      <h2>Guided Challenge — Robot ID Badge</h2>
+      <ul class="levels">
+        <li><span class="tag t-min">Min</span>Run it, then change the variables so it's <b>your</b> robot. Show a staff member.</li>
+        <li><span class="tag t-std">Standard</span>Invent <b>two new variables</b> (wheels, laser_count, favorite_snack&hellip;) and add them to the badge.</li>
+        <li><span class="tag t-boss">Boss</span>Use <code>input()</code> so it <b>asks</b> for the robot's name &amp; color, then builds the badge from the answers.</li>
+      </ul>
+
+      <h2 style="margin-top:18px;">Main Challenge — Robot Mad Libs (pairs)</h2>
+      <ul class="levels">
+        <li><span class="tag t-min">Min</span>Get the starter running and play it with your partner.</li>
+        <li><span class="tag t-std">Standard</span>Add <b>3 more questions</b> and <b>3 more story lines</b>.</li>
+        <li><span class="tag t-boss">Boss</span>Add a <code>battery</code> that starts at 100 and <b>drops each event</b> ("Battery now 70%&hellip;").</li>
+      </ul>
+    </section>
+
+    <section class="full">
+      <h2>Common bugs — read the error together, don't panic</h2>
+      <ul class="bugs" style="columns:2; column-gap:28px; padding-left:18px;">
+        <li>Missing quote or parenthesis &rarr; read the <b>line number</b> in the red error.</li>
+        <li><code>Print</code> vs <code>print</code> — Python is case-sensitive.</li>
+        <li>Forgot the <code>f</code> &rarr; it prints <code>{robot_name}</code> literally (show this once!).</li>
+        <li>Doing math on <code>input()</code>? Wrap it: <code>int(input(...))</code>.</li>
+      </ul>
+    </section>
+
+    <section class="full">
+      <div class="mantra">Quick win first &nbsp;·&nbsp; <span>Predict before you Run</span> &nbsp;·&nbsp; Break things on purpose</div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
