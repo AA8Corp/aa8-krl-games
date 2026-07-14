@@ -134,6 +134,13 @@ Every run draws a *different* patrol path — the random sensor steers the robot
 - **Standard win:** add a low-battery rule: when battery drops below 30, the robot prints a warning and its patrol steps get shorter (`forward(20)` instead of `forward(60)`).
 - **Boss level:** end-of-patrol grade — after the loop, use `if/elif/else` on `battery` to stamp the mission "FLAWLESS PATROL", "MISSION COMPLETE", or "BARELY MADE IT". Extra: change `pencolor` when battery is low so the drawn path *shows* where the robot got tired.
 
+**Portfolio capture (required, ~2 min per student — do it the moment a patrol runs, not as a separate block):** as each student gets a working patrol on screen, staff walks them through three quick saves so they leave with a real portfolio:
+1. **Screenshot the drawing.** Capture the turtle window (Assistant #1 posts the OS screenshot keys on the board) and save it into the Repl, named `my-patrol.png`.
+2. **One-sentence caption.** In a comment at the top of the capstone file, type `# What my robot does: ______` in their own words.
+3. **Confirm all three projects are saved** in their Replit account (Badge, Brain/Sensor, Patrol) — that's the portfolio.
+
+This turns "saved code" into a curated, shareable artifact without adding a timed block — it happens inside the existing challenge window.
+
 ### 7:40–7:52 · Showcase + The Growth Moment (12 min)
 - 3–4 pairs run their patrol on the projector; the audience predicts turns as the sensor readings print.
 - **Then the July payoff (5 min, do not skip):** everyone opens their Week 1 Robot ID Badge next to tonight's capstone. Lead: *"Three weeks ago, this was the hardest thing you'd ever coded. Read it now."* Ask a few students to explain their Week 1 code line by line — they can, and they'll feel it. Photograph this (if permitted); it's the parent-newsletter shot.
@@ -141,8 +148,25 @@ Every run draws a *different* patrol path — the random sensor steers the robot
 ### 7:52–8:00 · Wrap-Up & Pickup (8 min)
 - Exit ticket: *"Name the three robot superpowers and the Python thing that makes each one."* (memory/variables, decisions/if, movement/loops.)
 - Save all projects. These carry into next month.
+- **Hand out the take-home certificate** (`portfolio-certificate.html`, printed one per student) — the fill-in blanks let them write their robot's name and their three Replit project links. This is the physical portfolio piece parents see on the fridge.
 - Tease the future: "You now speak enough Python to boss around a real robot. Next month, the turtle gets wheels."
 - Standard pickup per the facilitator brief. **Extended staff debrief tonight:** wins/challenges for the month, which students are ready for hardware, who needs reinforcement before the smart-robot projects.
+
+---
+
+## The Portfolio: what every student takes home
+
+By the end of tonight, each student owns a small but real body of work — timestamped and re-runnable in their own Replit account:
+
+| Artifact | Week | Why it belongs in a portfolio |
+|----------|------|------------------------------|
+| **Robot ID Badge** (`.py`) | 1 | Baseline — shows where they started. Great "before" next to the capstone. |
+| **Robot Brain + Sensor Simulator** (`.py`) | 2 | Reacts to input and random sensor data — demonstrates logic. |
+| **Robot Patrol capstone** (`.py`) | 3 | The showpiece: memory + decisions + movement in one program that draws a new path every run. |
+| **`my-patrol.png` screenshot** | 3 | The visual — shareable in a newsletter, portfolio page, or fridge. |
+| **Printed certificate** | 3 | Physical take-home with their robot's name and project links filled in. |
+
+**Portfolio talking point for students & parents:** "I taught a robot to think in three weeks — it remembers, it decides, and it moves — and here's the code and the drawing to prove it." Every claim on the certificate maps to a saved file, so the portfolio is evidence, not a participation sticker.
 
 ---
 
